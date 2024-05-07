@@ -1,9 +1,14 @@
 import requests
+import sys
+
+roleName = sys.argv[1]
+user = sys.argv[2]
+
 
 files = {
     'type': (None, 'projectRoles'),
-    'roleName': (None, 'test2'),
-    'user': (None, 'sita'),
+    'roleName': (None, roleName),
+    'user': (None, user),
 }
 
 response = requests.post(
